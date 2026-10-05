@@ -96,8 +96,9 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
-app.use((_req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+app.get("*", (_req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "index.html"));
+});
 });
 
 app.listen(port, () => {
