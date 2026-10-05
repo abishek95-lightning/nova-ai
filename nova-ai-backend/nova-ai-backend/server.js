@@ -99,7 +99,6 @@ app.post("/api/chat", async (req, res) => {
 app.get("*", (_req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
-});
 
 app.listen(port, () => {
   console.log(`Nova AI server running at http://localhost:${port}`);
